@@ -20,7 +20,7 @@ public class TopicProducerTest {
     @Test
     public void testSuccess() {
         int id = (int) System.currentTimeMillis() / 1000;
-        topicProducer.syncSend(id, "匹配成功", "hello.kang.qing");
+        topicProducer.syncSend(id, "匹配成功", "111.hello.kang.qing");
     }
 
     @Test

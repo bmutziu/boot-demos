@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.yunqing</groupId>
     <artifactId>demo-rabbitmq</artifactId>
-    <packaging>pom</packaging>
+    <!--<packaging>pom</packaging>
     <modules>
         <module>publisher-confirm</module>
-    </modules>
+    </modules>-->
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
