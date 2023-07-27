@@ -5,14 +5,14 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 异步确认
+ * 异步确认 asynchronous confirmation
  * @author kangqing
  * @since 2023/7/11 20:30
  */
 @Data
 public class CorrelatedConfirmMessage<T> implements Serializable {
     /**
-     * 发布确认，异步确认
+     * 发布确认，异步确认 release confirmation, asynchronous confirmation
      */
     public static final String QUEUE = "QUEUE_PUBLISHER_CONFIRM_CORRELATED";
 

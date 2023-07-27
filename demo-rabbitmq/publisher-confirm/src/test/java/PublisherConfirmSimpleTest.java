@@ -23,25 +23,25 @@ public class PublisherConfirmSimpleTest {
     private CorrelatedProducer asyncProducer;
 
     /**
-     * 同步确认发送
+     * 同步确认发送 Simultaneous confirmation of sending
      * @throws InterruptedException
      */
     @Test
     public void testSyncSend() throws InterruptedException {
         int id = (int) (System.currentTimeMillis() / 1000);
         producer.syncSend(id);
-        log.info("[testSyncSend][发送编号：[{}] 发送成功]", id);
+        log.info("[testSyncSend][发送编号 Sending code: [{}] 发送成功 Sending successfully]", id);
     }
 
     /**
-     * 异步确认发送
+     * 异步确认发送 confirm sending
      * @throws InterruptedException
      */
     @Test
     public void testAsyncSend() throws InterruptedException {
         int id = (int) (System.currentTimeMillis() / 1000);
         asyncProducer.syncSend(id);
-        log.info("[testAsyncSend][发送编号：[{}] 发送成功]", id);
+        log.info("[testAsyncSend][发送编号 Send number：[{}] 发送成功 Sent successfully]", id);
 
     }
 }

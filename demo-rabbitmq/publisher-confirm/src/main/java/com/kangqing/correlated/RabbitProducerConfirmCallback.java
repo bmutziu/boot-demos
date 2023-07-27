@@ -19,9 +19,9 @@ public class RabbitProducerConfirmCallback implements RabbitTemplate.ConfirmCall
     @Override
     public void confirm(CorrelationData correlationData, boolean ack, String cause) {
         if (ack) {
-            log.info("[confirm][Confirm 成功 correlationData: {}]", correlationData);
+            log.info("[confirm][Confirm 成功 success correlationData: {}]", correlationData);
         } else {
-            log.error("[confirm][Confirm 失败 correlationData: {} cause: {}]", correlationData, cause);
+            log.error("[confirm][Confirm 失败 failure correlationData: {} cause: {}]", correlationData, cause);
         }
     }
 

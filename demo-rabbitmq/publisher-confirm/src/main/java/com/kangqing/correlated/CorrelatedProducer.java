@@ -17,11 +17,12 @@ public class CorrelatedProducer {
     private RabbitTemplate rabbitTemplate;
 
     public void syncSend(Integer id) {
-        // 创建 Demo13Message 消息
+        // 创建 Create Demo13Message 消息 message
         CorrelatedConfirmMessage<String> message = new CorrelatedConfirmMessage<>();
         message.setId(id);
-        message.setData("异步发送消息！！！");
-        // 异步发送消息
+        message.setData("异步发送消息 send a message !!!");
+        // 异步发送消息 send a message
         rabbitTemplate.convertAndSend(CorrelatedConfirmMessage.EXCHANGE, CorrelatedConfirmMessage.ROUTING_KEY, message);
+        log.info("[AsyncSend][发送消息完成 send message complete]");
     }
 }

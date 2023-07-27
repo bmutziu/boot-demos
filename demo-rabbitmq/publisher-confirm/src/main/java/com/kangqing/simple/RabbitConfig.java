@@ -17,9 +17,9 @@ public class RabbitConfig {
     @Bean
     public Queue demo01Queue() {
         return new Queue(PublisherConfirmMessage.QUEUE, // Queue 名字
-                true, // durable: 是否持久化
-                false, // exclusive: 是否排它
-                false); // autoDelete: 是否自动删除
+                true, // durable: 是否持久化 Whether to persist
+                false, // exclusive: 是否排它 Is it exclusive
+                false); // autoDelete: 是否自动删除 Whether to delete automatically
     }
 
     // 创建 Direct Exchange
